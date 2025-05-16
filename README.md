@@ -61,16 +61,16 @@
   <div class="section">
     <h2>🚀 Step-by-Step Guide</h2>
 
-    <h3>1. Setup Telegram API</h3>
-    <pre><code>from telethon.sync import TelegramClient
+  <h3>1. Setup Telegram API</h3>
+  <pre><code>from telethon.sync import TelegramClient
 
 api_id = 'YOUR_API_ID'
 api_hash = 'YOUR_API_HASH'
 client = TelegramClient('anon', api_id, api_hash)
 client.start()</code></pre>
 
-    <h3>2. Fetch Messages from a Channel</h3>
-    <pre><code>from telethon.tl.functions.messages import GetHistoryRequest
+  <h3>2. Fetch Messages from a Channel</h3>
+  <pre><code>from telethon.tl.functions.messages import GetHistoryRequest
 
 channel = 'telegram_channel_username'
 history = client(GetHistoryRequest(
@@ -84,8 +84,8 @@ history = client(GetHistoryRequest(
     hash=0
 ))</code></pre>
 
-    <h3>3. Extract .onion Links using Regex</h3>
-    <pre><code>import re
+  <h3>3. Extract .onion Links using Regex</h3>
+  <pre><code>import re
 
 onion_links = []
 pattern = r'https?://(?:[a-zA-Z0-9-]+\.)*onion(?:/[\w\-/]*)?'
@@ -94,8 +94,8 @@ for message in history.messages:
     matches = re.findall(pattern, message.message or "")
     onion_links.extend(matches)</code></pre>
 
-    <h3>4. Export to CSV</h3>
-    <pre><code>import pandas as pd
+  <h3>4. Export to CSV</h3>
+  <pre><code>import pandas as pd
 
 df = pd.DataFrame(onion_links, columns=['Onion Links'])
 df.to_csv('extracted_onion_links.csv', index=False)</code></pre>
