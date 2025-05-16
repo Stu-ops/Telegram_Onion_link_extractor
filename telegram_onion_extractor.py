@@ -6,8 +6,8 @@ from datetime import datetime
 from telethon import TelegramClient, events
 
 # Telegram API credentials - you need to get these from my.telegram.org
-API_ID = 22269266  
-API_HASH = "e97e0d66c7159a3b4b4e2eadefbdca2b"  
+API_ID = API_ID  
+API_HASH = "API_HASH"  
 CHANNEL_USERNAME = "toronionlinks"  
 OUTPUT_FILE = "onion_links.json"
 LAST_MESSAGE_ID_FILE = "last_message_id.txt"
